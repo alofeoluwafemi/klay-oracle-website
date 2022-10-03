@@ -351,8 +351,8 @@
                         <div class="tab-content code__block" id="myTabContent">
                             <div class="tab-pane fade show active" id="random-numbers-pane" role="tabpanel" aria-labelledby="random-numbers-tab" tabindex="0">
                                 <div class="px-2 code__block__content">
-                                    <pre>
-                                        {
+                                    <pre class="code__block-color__purple">
+{
   "active": true,
   "name": "RAND",
   "job_type": "RANDOM_NUMBER",
@@ -377,44 +377,42 @@
   ]
 }
                                     </pre>
-                                
-                                    <!-- <div class="mb-3">
-                                        <span class="code__block-color__green">// Imports</span><br/>
-                                        <span class="code__block-color__purple">Import </span><span class="code__block-color__blue">mongoose, { Schema } </span><span>from</span> <span>'untitled'</span>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <span class="code__block-color__green">// Collection name</span><br/>
-                                        <span class="code__block-color__purple">export const</span><span class="code__block-color__blue"> collection </span><span>= 'Design' |</span>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <span class="code__block-color__green">// Schema</span><br/>
-                                        <span class="code__block-color__purple">const</span><span class="code__block-color__blue"> schema</span> = <span class="code__block-color__purple">new</span><span> Schema( {</span><br/>
-                                            <span class="code__block-color__blue">&nbsp;&nbsp;&nbsp;&nbsp;name</span><span>: {</span><br/>
-                                                <span class="code__block-color__blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span><span>: &nbsp;String,</span><br/>
-                                                <span class="code__block-color__blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required</span><span>: &nbsp;true</span><br/>
-                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;},</span><br/><br/>
-
-                                            <span class="code__block-color__blue">&nbsp;&nbsp;&nbsp;&nbsp;description</span><span>: {</span><br/>
-                                                <span class="code__block-color__blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span><span>: &nbsp;String</span><br/>
-                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;}</span><br/>
-                                        <span>},&nbsp; {<span class="code__block-color__blue">timestamps</span><span>: true} )</span>
-                                    </div>
-
-                                    <div>
-                                        <span class="code__block-color__green">// Model</span><br/>
-                                        <span class="code__block-color__purple">export default</span><span> untitled.model(</span><span class="code__block-color__blue">collection</span>, <span class="code__block-color__blue">schema</span><span>,</span> <span class="code__block-color__blue">collection</span><span>)</span>
-                                    </div> -->
 
                                 </div>
                                 
                             </div>
                             <div class="tab-pane fade" id="data-feed-tab-pane" role="tabpanel" aria-labelledby="data-feed-tab" tabindex="0">
                                 <div class="px-2 code__block__content">
-
+<pre class="code__block-color__purple">
+{
+  "active": true,
+  "name": "KLAY_USD",
+  "job_type": "DATA_FEED",
+  "adapter_id": "efbdab54-4195-11ed-b878-0242ac120002",
+  "oracle": "0xDC77A7A497C9a9A7C086E3d57bFb753fF2cFa414",
+  "feeds": [
+    {
+      "url": "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=KLAY&tsyms=USD",
+      "headers": [
+        {"Content-Type" :  "application/json"}
+      ],
+      "request_type": "GET",
+      "reducers": [
+        {
+          "function": "PARSE",
+          "args": ["RAW","KLAY","USD","PRICE"]
+        },
+        {
+          "function": "MUL",
+          "args": [1000000000000000000]
+        }
+      ]
+    }
+  ]
+}
+</pre>
                                 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <span class="code__block-color__green">// Imports</span><br/>
                                         <span class="code__block-color__purple">Import </span><span class="code__block-color__blue">mongoose, { Schema } </span><span>from</span> <span>'untitled'</span>
                                     </div>
@@ -441,7 +439,7 @@
                                     <div>
                                         <span class="code__block-color__green">// Model</span><br/>
                                         <span class="code__block-color__purple">export default</span><span> untitled.model(</span><span class="code__block-color__blue">collection</span><span>, </span><span class="code__block-color__blue">schema</span><span>, </span> <span class="code__block-color__blue">collection</span><span>)</span>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                             </div>
